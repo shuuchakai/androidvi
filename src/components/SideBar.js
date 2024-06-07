@@ -42,10 +42,13 @@ const Sidebar = props => {
         </View>
       </DrawerContentScrollView>
       <View style={{padding: 20, borderTopWidth: 1, borderTopColor: '#ccc'}}>
-        <TouchableOpacity onPress={() => {}} style={{paddingVertical: 15}}>
+        <TouchableOpacity onPress={() => {
+          props.navigation.navigate('LandPage');
+        }} style={{paddingVertical: 15}}>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <MaterialIcons name="logout" size={24} color="black" />
             <Text
+
               style={{
                 fontSize: 15,
                 marginLeft: 5,

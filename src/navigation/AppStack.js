@@ -5,8 +5,9 @@ import { Octicons } from '@expo/vector-icons';
 
 import HomePage from '../pages/HomePage';
 import Dietas from '../pages/Dietas';
-import Perfil  from '../pages/Perfil';
+import Perfil from '../pages/Perfil';
 import Rutinas from '../pages/Rutinas';
+import Recipes from '../pages/Recipes';
 import FoodPhoto from '../pages/FoodPhoto';
 import SideBar from '../components/SideBar';
 
@@ -17,55 +18,64 @@ const AuthStack = () => {
         <Drawer.Navigator
             drawerContent={props => <SideBar {...props} />}
             screenOptions={{
-            drawerActiveBackgroundColor: '#00b4d8',
-            drawerActiveTintColor: 'white',
-            drawerInactiveTintColor: 'black',
-            drawerLabelStyle: { 
-                fontSize: 15,
-            },
+                drawerActiveBackgroundColor: '#00b4d8',
+                drawerActiveTintColor: 'white',
+                drawerInactiveTintColor: 'black',
+                drawerLabelStyle: {
+                    fontSize: 15,
+                },
             }}
         >
-            <Drawer.Screen 
-                name="Home" 
+            <Drawer.Screen
+                name="Home"
                 component={HomePage}
                 options={{
-                    drawerIcon: ({color}) => (
+                    drawerIcon: ({ color }) => (
                         <MaterialIcons name="restaurant" size={24} color={color} />
                     ),
                 }}
             />
-            <Drawer.Screen 
-                name="Dietas" 
+            <Drawer.Screen
+                name="Dietas"
                 component={Dietas}
                 options={{
-                    drawerIcon: ({color}) => (
+                    drawerIcon: ({ color }) => (
                         <Octicons name="home" size={24} color={color} />
                     ),
                 }}
             />
-            <Drawer.Screen 
-                name="Rutinas" 
+            <Drawer.Screen
+                name="Rutinas"
                 component={Rutinas}
                 options={{
-                    drawerIcon: ({color}) => (
+                    drawerIcon: ({ color }) => (
                         <MaterialIcons name="fitness-center" size={24} color={color} />
                     ),
                 }}
             />
-            <Drawer.Screen 
-                name="Perfil" 
-                component={Perfil} 
+            <Drawer.Screen
+                name="Perfil"
+                component={Perfil}
                 options={{
-                    drawerIcon: ({color}) => (
+                    drawerIcon: ({ color }) => (
                         <MaterialIcons name="person" size={24} color={color} />
                     ),
                 }}
             />
-            <Drawer.Screen 
-                name="FoodPhoto" 
-                component={FoodPhoto} 
+            <Drawer.Screen
+                name="Recipes"
+                component={Recipes}
                 options={{
-                    drawerIcon: ({color}) => (
+                    drawerIcon: ({ color }) => (
+                        <MaterialIcons name="restaurant" size={24} color={color} />
+                    ),
+                }}
+            />
+            <Drawer.Screen
+                name="FoodPhoto"
+                component={FoodPhoto}
+                options={{
+                    drawerIcon: ({ color }) => (
                         <MaterialIcons name="camera-alt" size={24} color="black" />
                     ),
                 }}

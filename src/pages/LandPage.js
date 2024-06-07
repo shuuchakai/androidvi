@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity, TextInput } from "react-nativ
 import { useNavigation } from "@react-navigation/native";
 import GradientText from "react-native-gradient-texts";
 
-import WatermelonIcon from "../icons/WatermelonIcon.js";
+// import WatermelonIcon from "../icons/WatermelonIcon.js";
 
 import SigninCard from "../components/SinginCard.js";
 
